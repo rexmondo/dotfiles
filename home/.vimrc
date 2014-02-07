@@ -1,6 +1,6 @@
 " Syntax Highlighting and colors
   syntax on
-  colorscheme candy
+  colorscheme solarized
   set t_Co=256
 " Language Overrides
   if has("autocmd")

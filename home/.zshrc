@@ -14,7 +14,8 @@ export DOTFILES="$HOME/.homesick/repos/dotfiles"
 
 # Remap applications
 alias ll="ls -al"
-
+alias vi=vim
+alias nano=vim
 
 # ssh wrapper that rename current tmux window to the hostname of the
 # remote host.

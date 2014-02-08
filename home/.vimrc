@@ -1,7 +1,9 @@
 " Syntax Highlighting and colors
   syntax on
   colorscheme solarized
+  set background=dark
   set t_Co=256
+
 " Language Overrides
   if has("autocmd")
     " Drupal *.module and *.install files.

@@ -39,3 +39,6 @@ ssh() {
         tmux rename-window "$old_name"
     fi
 }
+
+# Modify zsh PATH
+export PATH=$HOME/local/bin:$PATH

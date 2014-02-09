@@ -1,6 +1,6 @@
 " Syntax Highlighting and colors
   syntax on
-  colorscheme solarized
+  colorscheme gruvbox
   set background=dark
   set t_Co=256
 

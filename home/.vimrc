@@ -4,6 +4,9 @@
   set background=dark
   set t_Co=256
 
+" key fixes
+  set backspace=indent,eol,start
+
 " Language Overrides
   if has("autocmd")
     " Drupal *.module and *.install files.

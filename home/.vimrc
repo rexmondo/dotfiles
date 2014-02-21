@@ -1,8 +1,9 @@
-" Syntax Highlighting and colors
+" Syntax Highlighting, colors, and other display settings
   syntax on
   colorscheme gruvbox
   set background=dark
   set t_Co=256
+  set number
 
 " key fixes
   set backspace=indent,eol,start

@@ -37,3 +37,6 @@
     set autoindent   " Match level
     set cindent      " Indent braces
     set tabstop=2 softtabstop=2 shiftwidth=2 expandtab " Indent size
+    
+" syntastic syntax checking on open
+    let g:syntastic_check_on_open=1

@@ -1,3 +1,6 @@
+" Pathogen call
+  execute pathogen#infect() 
+
 " Syntax Highlighting, colors, and other display settings
   syntax on
   colorscheme gruvbox

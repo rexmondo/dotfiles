@@ -11,9 +11,21 @@
 " key fixes
   set backspace=indent,eol,start
 
+" Get off my lawn
+  nnoremap <Left> :echoe "Use h"<CR>
+  nnoremap <Right> :echoe "Use l"<CR>
+  nnoremap <Up> :echoe "Use k"<CR>
+  nnoremap <Down> :echoe "Use j"<CR>
+
+" Quicker window movement
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-l> <C-w>l
+
 " Language Overrides
   if has("autocmd")
-    " Drupal *.module and *.install files.
+  " Drupal *.module and *.install files.
     augroup module
       autocmd BufRead,BufNewFile *.module  set filetype=php
       autocmd BufRead,BufNewFile *.install set filetype=php

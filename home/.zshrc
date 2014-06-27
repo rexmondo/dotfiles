@@ -42,3 +42,10 @@ ssh() {
 
 # Modify zsh PATH
 export PATH=$HOME/local/bin:$PATH
+
+# set 256 color terminal
+if [ -e /usr/share/terminfo/x/xterm-256color  ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi

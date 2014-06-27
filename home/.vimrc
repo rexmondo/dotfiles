@@ -57,3 +57,12 @@
   autocmd vimenter * if !argc() | NERDTree | endif  
   map <F3> :NERDTreeToggle<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Search
+  set incsearch " Search should highlight as you type
+  set hlsearch " Highlight all search results
+  nnoremap <leader><space> :nohlsearch<cr>
+
+
+" powerline
+  let g:airline_powerline_fonts = 1

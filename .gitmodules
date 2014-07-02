@@ -34,3 +34,6 @@
 [submodule "home/.vim/bundle/vim-airline"]
 	path = home/.vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "home/.vim/bundle/drupalvim"]
+	path = home/.vim/bundle/drupalvim
+	url = http://git.drupal.org/project/vimrc.git

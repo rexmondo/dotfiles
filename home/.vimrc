@@ -1,5 +1,9 @@
 " Pathogen call
+  execute pathogen#infect('~/.vim/bundle/drupalvim/bundle/{}')
   execute pathogen#infect() 
+
+" Always edit in utf-8
+set encoding=utf-8
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
@@ -62,7 +66,6 @@
   set incsearch " Search should highlight as you type
   set hlsearch " Highlight all search results
   nnoremap <leader><space> :nohlsearch<cr>
-
 
 " powerline
   let g:airline_powerline_fonts = 1

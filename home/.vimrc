@@ -1,6 +1,6 @@
 " Pathogen call
   execute pathogen#infect('~/.vim/bundle/drupalvim/bundle/{}')
-  execute pathogen#infect() 
+  execute pathogen#infect()
 
 " Always edit in utf-8
 set encoding=utf-8
@@ -52,13 +52,16 @@ set encoding=utf-8
   let g:indent_guides_enable_on_vim_startup = 1
   set autoindent   " Match level
   set cindent      " Indent braces
-  set tabstop=2 softtabstop=2 shiftwidth=2 expandtab " Indent size
-    
+  set tabstop=2  shiftwidth=2 expandtab " Indent size
+
+" paste mode for insert bound to <F4>
+  set pastetoggle=<F4>
+
 " syntastic syntax checking on open
   let g:syntastic_check_on_open=1
 
 " NERDTree stuff
-  autocmd vimenter * if !argc() | NERDTree | endif  
+  autocmd vimenter * if !argc() | NERDTree | endif
   map <F3> :NERDTreeToggle<CR>
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
@@ -67,5 +70,6 @@ set encoding=utf-8
   set hlsearch " Highlight all search results
   nnoremap <leader><space> :nohlsearch<cr>
 
-" powerline
+" powerline/airline
   let g:airline_powerline_fonts = 1
+  set laststatus=2

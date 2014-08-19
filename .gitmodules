@@ -37,3 +37,6 @@
 [submodule "home/.vim/bundle/drupalvim"]
 	path = home/.vim/bundle/drupalvim
 	url = http://git.drupal.org/project/vimrc.git
+[submodule "home/.vim/bundle/nerdcommenter"]
+	path = home/.vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git

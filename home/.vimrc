@@ -78,6 +78,7 @@ set encoding=utf-8
   set nowrap
 
 " Search for selected text, forwards or backwards.
+" Press * to search forwards for selected text, or # to search backwards.
 vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
   \gvy/<C-R><C-R>=substitute(
@@ -89,5 +90,15 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
 
-" filtype plugins must be on for nercommenter to work right
+" filtype plugins must be on for nerdcommenter to work right
   filetype plugin on
+
+" Airline fix
+  " fix ttimeoutlen for exiting insert mode with airline
+  set ttimeoutlen=50
+
+" Environment
+  " Save our swap and history files to ~/.vimdata, to keep the working dir clean
+    set directory=~/.vimdata// " // at the end sets the filename to full path, to ensure uniqueness
+    set undodir=~/.vimdata
+    set undofile " Save our undo history to a file when writing a file - Saves to undodir

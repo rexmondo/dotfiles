@@ -1,3 +1,35 @@
+" required for vundle (!!!LEAVE BEFORE!!!)
+set nocompatible " no more vi compatibility
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" call all vundle plugins here
+
+Plugin 'gmarik/Vundle.vim' " let vundle manage vundle
+
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+Plugin 'tpope/vim-haml'
+Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'http://git.drupal.org/project/vimrc.git'
+
+
+" end vundle stuff
+call vundle#end()
+filetype plugin indent on
+
+
 " Pathogen call
   execute pathogen#infect('~/.vim/bundle/drupalvim/bundle/{}')
   execute pathogen#infect()
@@ -89,9 +121,6 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
-
-" filtype plugins must be on for nerdcommenter to work right
-  filetype plugin on
 
 " Airline fix
   " fix ttimeoutlen for exiting insert mode with airline

@@ -40,6 +40,10 @@ Plugin 'http://git.drupal.org/project/vimrc.git'
 " make sure modifiable is always on
   set modifiable
 
+" better split directions
+  set splitbelow
+  set splitright
+
 " Syntax Highlighting, colors, and other display settings
   syntax on
   colorscheme gruvbox

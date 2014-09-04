@@ -26,8 +26,8 @@ Plugin 'http://git.drupal.org/project/vimrc.git'
 
 
 " end vundle stuff
-call vundle#end()
-filetype plugin indent on
+  call vundle#end()
+  filetype plugin indent on
 
 
 " Pathogen call
@@ -35,7 +35,10 @@ filetype plugin indent on
   execute pathogen#infect()
 
 " Always edit in utf-8
-set encoding=utf-8
+  set encoding=utf-8
+
+" make sure modifiable is always on
+  set modifiable
 
 " Syntax Highlighting, colors, and other display settings
   syntax on

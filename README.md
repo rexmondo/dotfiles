@@ -28,7 +28,7 @@ dotfiles for linux environments.
 
 1. `$ brew install zsh` (OSX with Homebrew) or `sudo apt-get install zsh` (debian)
 1. `$ brew install tmux` (OSX with Homebrew) or `sudo apt-get install tmux` (debian)
-1. `chsh -s \`which zsh\`` to change shell to zsh
+1. `chsh -s ``which zsh`` to change shell to zsh
 1. `$ git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
 1. `cd $HOME/.homesick/repos/homeshick && git checkout 6b53454a60eeeed9329e0c648a5bc4984615e733`
 1. Add `$HOME/.homesick/repos/homeshick/bin/homeshick` to your `$PATH`. 

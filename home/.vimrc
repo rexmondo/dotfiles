@@ -38,16 +38,16 @@
   set splitbelow
   set splitright
 
-" line number stuff
-  set relativenumber
-  highlight CursorLineNr ctermfg=grey ctermbg=green
-
 " Syntax Highlighting, colors, and other display settings
   syntax on
   colorscheme base16-default
   set background=dark
   set t_Co=256
   set number
+
+" line number stuff
+  set relativenumber
+  highlight CursorLineNr ctermfg=black ctermbg=blue
 
 " key fixes
   set backspace=indent,eol,start

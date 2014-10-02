@@ -9,6 +9,7 @@
 " call all vundle plugins here
   Plugin 'chriskempson/base16-vim'
   Plugin 'scrooloose/syntastic'
+  Plugin 'pangloss/vim-javascript'
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-fugitive'
   Plugin 'scrooloose/nerdtree'

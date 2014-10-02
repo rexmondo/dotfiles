@@ -1,38 +1,31 @@
 " required for vundle (!!!LEAVE BEFORE!!!)
-set nocompatible " no more vi compatibility
-filetype off
+  set nocompatible " no more vi compatibility
+  filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
 " call all vundle plugins here
-
-Plugin 'gmarik/Vundle.vim' " let vundle manage vundle
-
-Plugin 'scrooloose/syntastic'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-haml'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'http://git.drupal.org/project/vimrc.git'
+  Plugin 'chriskempson/base16-vim'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'garbas/vim-snipmate'
+  Plugin 'MarcWeber/vim-addon-mw-utils'
+  Plugin 'tomtom/tlib_vim'
+  Plugin 'honza/vim-snippets'
+  Plugin 'tpope/vim-haml'
+  Plugin 'bling/vim-airline'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'http://git.drupal.org/project/vimrc.git'
 
 
 " end vundle stuff
   call vundle#end()
   filetype plugin indent on
-
-
-" Pathogen call
-  execute pathogen#infect('~/.vim/bundle/drupalvim/bundle/{}')
-  execute pathogen#infect()
 
 " Always edit in utf-8
   set encoding=utf-8
@@ -46,7 +39,7 @@ Plugin 'http://git.drupal.org/project/vimrc.git'
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  colorscheme gruvbox
+  colorscheme base16-default
   set background=dark
   set t_Co=256
   set number
@@ -111,6 +104,7 @@ Plugin 'http://git.drupal.org/project/vimrc.git'
 
 " powerline/airline
   let g:airline_powerline_fonts = 1
+  let g:airline_theme='base16'
   set laststatus=2
 
 " wrapping is stupid
@@ -138,3 +132,9 @@ vnoremap <silent> # :<C-U>
     set directory=~/.vimdata// " // at the end sets the filename to full path, to ensure uniqueness
     set undodir=~/.vimdata
     set undofile " Save our undo history to a file when writing a file - Saves to undodir
+
+" Watch ~/.vimrc and reload on change
+augroup watchvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END

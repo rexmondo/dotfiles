@@ -10,6 +10,7 @@
   Plugin 'chriskempson/base16-vim'
   Plugin 'scrooloose/syntastic'
   Plugin 'pangloss/vim-javascript'
+  Plugin 'othree/javascript-libraries-syntax.vim'      
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-fugitive'
   Plugin 'scrooloose/nerdtree'

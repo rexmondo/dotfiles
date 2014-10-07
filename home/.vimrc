@@ -144,3 +144,6 @@ augroup watchvimrc
   au!
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+
+" Angular specific settings
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

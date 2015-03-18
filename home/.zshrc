@@ -44,3 +44,25 @@ ssh() {
 export PATH=$HOME/local/bin:$PATH
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+function chpwd() {
+  rename_window
+}
+
+function rename_window() {
+  SITE=$(pwd | awk '{match($0, "www/([^/]*)", site)}END{print site[1]}')
+  FOLDER=$(pwd | awk '{match($0, "/([^/]*)/?$", folder)}END{print folder[1]}')
+
+  # If we're not in a site right now, don't change the title
+  if [ -z "$SITE" ]; then
+    return
+  fi
+
+  # If we're in a subfolder, add that to the site
+  if [[ "$SITE" != "$FOLDER" ]]; then
+    SITE="$SITE - $FOLDER"
+  fi
+
+  tmux rename-window $SITE
+
+}

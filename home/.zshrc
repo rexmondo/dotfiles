@@ -42,8 +42,8 @@ ssh() {
 
 # Modify zsh PATH
 export PATH=$HOME/local/bin:$PATH
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/sbt/bin" # Add sbt bin to path
 
 function chpwd() {
   rename_window

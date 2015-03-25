@@ -41,7 +41,7 @@
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  colorscheme base16-default
+  colorscheme base16-eighties
   set background=dark
   set t_Co=256
   set number

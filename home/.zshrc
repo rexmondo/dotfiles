@@ -17,6 +17,11 @@ alias ll="ls -al"
 alias vi=vim
 alias nano=vim
 
+# Set everything to use vim
+export VISUAL=vim
+export EDITOR=vim
+export GIT_EDITOR=vim
+
 # ssh wrapper that rename current tmux window to the hostname of the
 # remote host.
 ssh() {

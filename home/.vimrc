@@ -23,6 +23,7 @@
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'http://git.drupal.org/project/vimrc.git'
+  Plugin 'NLKNguyen/papercolor-theme'
 
 
 " end vundle stuff
@@ -41,7 +42,7 @@
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  colorscheme base16-eighties
+  colorscheme PaperColor-Dark
   set background=dark
   set t_Co=256
   set number
@@ -110,7 +111,7 @@
 
 " powerline/airline
   let g:airline_powerline_fonts = 1
-  let g:airline_theme='base16'
+  let g:airline_theme='PaperColor'
   set laststatus=2
 
 " wrapping is stupid

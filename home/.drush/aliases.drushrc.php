@@ -1,7 +1,6 @@
 <?php
 
 exec('git remote -v 2> /dev/null', $remotes);
-
 foreach ($remotes as $remote_raw) {
   if (strpos($remote_raw, '@') !== FALSE) { continue; }
 
@@ -20,7 +19,6 @@ foreach ($remotes as $remote_raw) {
     'uri' => $uri,
     'path-aliases' => array(
       '%files' => 'sites/default/files',
-      '%dump-dir' => '/tmp',
     ),
   );
 

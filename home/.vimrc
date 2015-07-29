@@ -146,5 +146,10 @@ augroup watchvimrc
   au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
+" syntastic settings for the php code sniffer
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_php_checkers=['phpcs']
+let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+
 " Angular specific settings
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

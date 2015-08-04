@@ -42,7 +42,7 @@
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  colorscheme PaperColor-Dark
+  colorscheme PaperColor
   set background=dark
   set t_Co=256
   set number

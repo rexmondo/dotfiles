@@ -2,7 +2,7 @@
 # Executes commands at the start of an interactive session.
 #
 
-source /etc/profile 2> dev/null
+source /etc/profile 2> /dev/null
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then

@@ -1,0 +1,7 @@
+[user]
+	name = Ben Hoffman
+	email = dbenhoffman@gmail.com
+[push]
+	default = simple
+[core]
+  filemode=false

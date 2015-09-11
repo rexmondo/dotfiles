@@ -24,6 +24,7 @@
   Plugin 'scrooloose/nerdcommenter'
   Plugin 'http://git.drupal.org/project/vimrc.git'
   Plugin 'NLKNguyen/papercolor-theme'
+  Plugin 'lepture/vim-jinja'
 
 
 " end vundle stuff
@@ -44,10 +45,10 @@
   syntax on
   colorscheme PaperColor
   set background=dark
-  set t_Co=256
-  set number
+  set t_Co=16
 
 " line number stuff
+  set number
   set relativenumber
   highlight CursorLineNr ctermfg=black ctermbg=blue
 

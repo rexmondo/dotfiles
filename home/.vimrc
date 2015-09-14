@@ -45,12 +45,13 @@
   syntax on
   colorscheme PaperColor
   set background=dark
-  set t_Co=16
+  set t_Co=256
 
 " line number stuff
   set number
   set relativenumber
-  highlight CursorLineNr ctermfg=black ctermbg=blue
+  highlight LineNr ctermfg=blue ctermbg=black
+  highlight CursorLineNr ctermfg=black ctermbg=darkred
 
 " key fixes
   set backspace=indent,eol,start

@@ -25,6 +25,7 @@
   Plugin 'http://git.drupal.org/project/vimrc.git'
   Plugin 'NLKNguyen/papercolor-theme'
   Plugin 'lepture/vim-jinja'
+  Plugin 'editorconfig/editorconfig-vim'
 
 
 " end vundle stuff

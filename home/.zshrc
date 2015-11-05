@@ -96,3 +96,6 @@ function rename_window() {
   tmux rename-window $SITE
 
 }
+
+export NVM_DIR="/home/ben/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

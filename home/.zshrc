@@ -1,6 +1,8 @@
 #
 # Executes commands at the start of an interactive session.
-#
+
+# Ensure our custom themes will be found
+fpath=( ~/.zpreztothemes "${fpath[@]}"  )
 
 source /etc/profile 2> /dev/null
 

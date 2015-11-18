@@ -1,5 +1,6 @@
 " required for vundle (!!!LEAVE BEFORE!!!)
   set nocompatible " no more vi compatibility
+  set hidden " needed for ctrlspace
   filetype off
 
 " set the runtime path to include Vundle and initialize
@@ -13,7 +14,6 @@
   Plugin 'othree/javascript-libraries-syntax.vim'      
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-fugitive'
-  Plugin 'scrooloose/nerdtree'
   Plugin 'jiangmiao/auto-pairs'
   Plugin 'garbas/vim-snipmate'
   Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -26,11 +26,21 @@
   Plugin 'NLKNguyen/papercolor-theme'
   Plugin 'lepture/vim-jinja'
   Plugin 'editorconfig/editorconfig-vim'
+  Plugin 'szw/vim-ctrlspace'
+  Plugin 'rking/ag.vim'
 
 
 " end vundle stuff
   call vundle#end()
   filetype plugin indent on
+
+" ctrl-space setup
+  if has('gui_running')
+    let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
+  endif
+  if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+  endif
 
 " Always edit in utf-8
   set encoding=utf-8
@@ -102,11 +112,6 @@
 " syntastic syntax checking on open
   let g:syntastic_check_on_open=1
 
-" NERDTree stuff
-  autocmd vimenter * if !argc() | NERDTree | endif
-  map <F3> :NERDTreeToggle<CR>
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " Search
   set incsearch " Search should highlight as you type
   set hlsearch " Highlight all search results
@@ -122,16 +127,16 @@
 
 " Search for selected text, forwards or backwards.
 " Press * to search forwards for selected text, or # to search backwards.
-vnoremap <silent> * :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy/<C-R><C-R>=substitute(
-  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(
-  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
+  vnoremap <silent> * :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy/<C-R><C-R>=substitute(
+    \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
+  vnoremap <silent> # :<C-U>
+    \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+    \gvy?<C-R><C-R>=substitute(
+    \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+    \gV:call setreg('"', old_reg, old_regtype)<CR>
 
 " Airline fix
   " fix ttimeoutlen for exiting insert mode with airline

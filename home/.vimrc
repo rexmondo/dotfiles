@@ -147,6 +147,7 @@
     set directory=~/.vimdata// " // at the end sets the filename to full path, to ensure uniqueness
     set undodir=~/.vimdata
     set undofile " Save our undo history to a file when writing a file - Saves to undodir
+    set backupcopy=yes " Make Vim play nicely with Webpack
 
 " Watch ~/.vimrc and reload on change
 augroup watchvimrc

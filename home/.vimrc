@@ -30,6 +30,9 @@
   Plugin 'rking/ag.vim'
   Plugin 'tpope/vim-surround'
   Plugin 'mxw/vim-jsx'
+  Plugin 'Shougo/neocomplete.vim'
+  Plugin 'Shougo/neosnippet'
+  Plugin 'Shougo/neosnippet-snippets'
 
 
 " end vundle stuff

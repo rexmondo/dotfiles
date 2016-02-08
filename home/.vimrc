@@ -28,6 +28,7 @@
   Plugin 'editorconfig/editorconfig-vim'
   Plugin 'szw/vim-ctrlspace'
   Plugin 'rking/ag.vim'
+  Plugin 'tpope/vim-surround'
 
 
 " end vundle stuff

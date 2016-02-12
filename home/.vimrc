@@ -10,7 +10,6 @@
 " call all vundle plugins here
   Plugin 'chriskempson/base16-vim'
   Plugin 'scrooloose/syntastic'
-  Plugin 'pangloss/vim-javascript'
   Plugin 'othree/javascript-libraries-syntax.vim'      
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-fugitive'
@@ -33,6 +32,8 @@
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'Shougo/neosnippet'
   Plugin 'Shougo/neosnippet-snippets'
+  Plugin 'othree/yajs.vim'
+  Plugin 'gavocanov/vim-js-indent'
 
 
 " end vundle stuff

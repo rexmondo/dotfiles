@@ -25,8 +25,6 @@
   Plugin 'NLKNguyen/papercolor-theme'
   Plugin 'lepture/vim-jinja'
   Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'szw/vim-ctrlspace'
-  Plugin 'rking/ag.vim'
   Plugin 'tpope/vim-surround'
   Plugin 'mxw/vim-jsx'
   Plugin 'Shougo/neocomplete.vim'

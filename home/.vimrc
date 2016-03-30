@@ -32,6 +32,7 @@
   Plugin 'Shougo/neosnippet-snippets'
   Plugin 'othree/yajs.vim'
   Plugin 'gavocanov/vim-js-indent'
+  Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
 
 
 " end vundle stuff

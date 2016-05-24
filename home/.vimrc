@@ -33,6 +33,7 @@
   Plugin 'othree/yajs.vim'
   Plugin 'gavocanov/vim-js-indent'
   Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
+  Plugin 'lambdatoast/elm.vim'
 
 
 " end vundle stuff

@@ -167,3 +167,6 @@ let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,in
 
 " Angular specific settings
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+" toggle centering
+:nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>

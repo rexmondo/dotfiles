@@ -35,19 +35,11 @@
   Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'elixir-lang/vim-elixir'
-
+  Plugin 'raichoo/purescript-vim'
 
 " end vundle stuff
   call vundle#end()
   filetype plugin indent on
-
-" ctrl-space setup
-  if has('gui_running')
-    let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢" }
-  endif
-  if executable("ag")
-    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-  endif
 
 " Always edit in utf-8
   set encoding=utf-8

@@ -34,6 +34,7 @@
   Plugin 'gavocanov/vim-js-indent'
   Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
   Plugin 'lambdatoast/elm.vim'
+  Plugin 'elixir-lang/vim-elixir'
 
 
 " end vundle stuff

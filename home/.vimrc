@@ -10,7 +10,7 @@
 " call all vundle plugins here
   Plugin 'chriskempson/base16-vim'
   Plugin 'scrooloose/syntastic'
-  Plugin 'othree/javascript-libraries-syntax.vim'      
+  Plugin 'othree/javascript-libraries-syntax.vim'
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-fugitive'
   Plugin 'jiangmiao/auto-pairs'
@@ -55,7 +55,7 @@
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  let g:seoul256_background = 234
+  let g:seoul256_background = 236
   colorscheme seoul256
   set background=dark
   set t_Co=256
@@ -164,3 +164,11 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 
 " toggle centering
 :nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+
+" make proper background on 256 color terminals
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif

@@ -30,12 +30,14 @@
   Plugin 'Shougo/neocomplete.vim'
   Plugin 'Shougo/neosnippet'
   Plugin 'Shougo/neosnippet-snippets'
-  Plugin 'othree/yajs.vim'
+  Plugin 'pangloss/vim-javascript'
   Plugin 'gavocanov/vim-js-indent'
   Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
   Plugin 'lambdatoast/elm.vim'
   Plugin 'elixir-lang/vim-elixir'
   Plugin 'raichoo/purescript-vim'
+  Plugin 'isRuslan/vim-es6'
+  Plugin 'junegunn/seoul256.vim'
 
 " end vundle stuff
   call vundle#end()
@@ -53,15 +55,14 @@
 
 " Syntax Highlighting, colors, and other display settings
   syntax on
-  colorscheme PaperColor
+  let g:seoul256_background = 234
+  colorscheme seoul256
   set background=dark
   set t_Co=256
 
 " line number stuff
   set number
   set relativenumber
-  highlight LineNr ctermfg=blue ctermbg=black
-  highlight CursorLineNr ctermfg=black ctermbg=darkred
 
 " key fixes
   set backspace=indent,eol,start

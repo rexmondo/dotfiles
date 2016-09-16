@@ -38,6 +38,7 @@
   Plugin 'raichoo/purescript-vim'
   Plugin 'isRuslan/vim-es6'
   Plugin 'junegunn/seoul256.vim'
+  Plugin 'airblade/vim-gitgutter'
 
 " end vundle stuff
   call vundle#end()

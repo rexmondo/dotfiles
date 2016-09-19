@@ -1,4 +1,4 @@
-  set nocompatible " no more vi compatibility
+set nocompatible " no more vi compatibility
 
 " attempt to download vim-plug automatically
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -29,8 +29,7 @@ endif
   Plug 'lepture/vim-jinja'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-surround'
-  Plug 'mxw/vim-jsx'
-  Plug 'pangloss/vim-javascript'
+  Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx'
   Plug 'gavocanov/vim-js-indent'
   Plug 'pmsorhaindo/syntastic-local-eslint.vim'
   Plug 'lambdatoast/elm.vim'
@@ -39,6 +38,10 @@ endif
   Plug 'isRuslan/vim-es6'
   Plug 'junegunn/seoul256.vim'
   Plug 'airblade/vim-gitgutter'
+  Plug 'elzr/vim-json'
+  Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " end plug
   call plug#end()

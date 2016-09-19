@@ -1,48 +1,47 @@
-" required for vundle (!!!LEAVE BEFORE!!!)
   set nocompatible " no more vi compatibility
-  set hidden " needed for ctrlspace
-  filetype off
 
-" set the runtime path to include Vundle and initialize
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+" attempt to download vim-plug automatically
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" call all vundle plugins here
-  Plugin 'chriskempson/base16-vim'
-  Plugin 'scrooloose/syntastic'
-  Plugin 'othree/javascript-libraries-syntax.vim'
-  Plugin 'mattn/emmet-vim'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'jiangmiao/auto-pairs'
-  Plugin 'garbas/vim-snipmate'
-  Plugin 'MarcWeber/vim-addon-mw-utils'
-  Plugin 'tomtom/tlib_vim'
-  Plugin 'honza/vim-snippets'
-  Plugin 'tpope/vim-haml'
-  Plugin 'bling/vim-airline'
-  Plugin 'scrooloose/nerdcommenter'
-  Plugin 'http://git.drupal.org/project/vimrc.git'
-  Plugin 'NLKNguyen/papercolor-theme'
-  Plugin 'lepture/vim-jinja'
-  Plugin 'editorconfig/editorconfig-vim'
-  Plugin 'tpope/vim-surround'
-  Plugin 'mxw/vim-jsx'
-  Plugin 'Shougo/neocomplete.vim'
-  Plugin 'Shougo/neosnippet'
-  Plugin 'Shougo/neosnippet-snippets'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'gavocanov/vim-js-indent'
-  Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
-  Plugin 'lambdatoast/elm.vim'
-  Plugin 'elixir-lang/vim-elixir'
-  Plugin 'raichoo/purescript-vim'
-  Plugin 'isRuslan/vim-es6'
-  Plugin 'junegunn/seoul256.vim'
-  Plugin 'airblade/vim-gitgutter'
+" Initialize plugin manager
+  call plug#begin('~/.vim/bundle')
 
-" end vundle stuff
-  call vundle#end()
-  filetype plugin indent on
+" install plugins
+  Plug 'chriskempson/base16-vim'
+  Plug 'scrooloose/syntastic'
+  Plug 'othree/javascript-libraries-syntax.vim'
+  Plug 'mattn/emmet-vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'garbas/vim-snipmate'
+  Plug 'MarcWeber/vim-addon-mw-utils'
+  Plug 'tomtom/tlib_vim'
+  Plug 'honza/vim-snippets'
+  Plug 'tpope/vim-haml'
+  Plug 'bling/vim-airline'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'http://git.drupal.org/project/vimrc.git'
+  Plug 'NLKNguyen/papercolor-theme'
+  Plug 'lepture/vim-jinja'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-surround'
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'gavocanov/vim-js-indent'
+  Plug 'pmsorhaindo/syntastic-local-eslint.vim'
+  Plug 'lambdatoast/elm.vim'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'raichoo/purescript-vim'
+  Plug 'isRuslan/vim-es6'
+  Plug 'junegunn/seoul256.vim'
+  Plug 'airblade/vim-gitgutter'
+
+" end plug
+  call plug#end()
 
 " Always edit in utf-8
   set encoding=utf-8

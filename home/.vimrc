@@ -168,6 +168,9 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 " toggle centering
 :nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 
+" tern keys
+let g:tern_map_keys=1
+
 " make proper background on 256 color terminals
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes

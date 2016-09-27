@@ -42,6 +42,8 @@ endif
   Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+  Plug 'junegunn/fzf', { 'dir': '~/fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
 
 " end plug
   call plug#end()

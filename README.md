@@ -2,7 +2,7 @@ dotfiles
 ========
 
 dotfiles for linux environments.
-2014 [Ben Hoffman](http://github.com/rexmondo).
+2017 [Ben Hoffman](http://github.com/rexmondo).
 
 ### Contents
 + [sorin-ionescu/prezto](https://github.com/sorin-ionescu/prezto) — awesome zsh config
@@ -40,8 +40,10 @@ dotfiles for linux environments.
 1. ``$ chsh -s `which zsh` `` to change shell to zsh
 1. `$ git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick`
 1. `$ $HOME/.homesick/repos/homeshick/bin/homeshick clone git@github.com:rexmondo/dotfiles.git`
-1. `$ brew install the_silver_searcher` (OSX with homebrew) or `sudo apt-get install silversearcher-ag` (debian) 
-1. Start `vim`. Do `:PluginInstall`.
+1. install node on your system (I prefer to use [https://github.com/tj/n](n))
+1. `$ sudo apt-get install build-essential cmake python-dev python3-dev` for YouCompleteMe
+1. get a good version of vim (like `vim-nox` from `ppa:jonathonf/vim`)
+1. Start `vim`.
 1. ctrl-A I to install tmux plugins.
 1. ???
 1. Profit.

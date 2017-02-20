@@ -44,6 +44,7 @@ endif
   Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
   Plug 'junegunn/fzf', { 'dir': '~/fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  Plug 'vim-scripts/VimClojure'
 
 " end plug
   call plug#end()
@@ -160,7 +161,7 @@ augroup watchvimrc
 augroup END
 
 " syntastic settings for the php code sniffer
-let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_checkers=['standard']
 let g:syntastic_php_checkers=['phpcs']
 let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 

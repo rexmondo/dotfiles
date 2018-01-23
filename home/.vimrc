@@ -161,7 +161,8 @@ augroup watchvimrc
 augroup END
 
 " syntastic settings for the php code sniffer
-let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_args='--fix'
 let g:syntastic_php_checkers=['phpcs']
 let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 

@@ -1,23 +1,25 @@
 [user]
-	name = Ben Hoffman
-	email = dbenhoffman@gmail.com
+  name = Ben Hoffman
+  email = dbenhoffman@gmail.com
 [push]
-	default = simple
+  default = simple
 [core]
   filemode=false
-	pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
+  pager = diff-highlight | diff-so-fancy | less --tabs=1,5 -R
 [alias]
   tree = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   vtag = tag --sort=version:refname
+  bck = checkout HEAD^
+  fwd = "!f() { git log --reverse --pretty=%H master | grep -A 1 $(git rev-parse HEAD) | tail -n1 | xargs git checkout; }; f"
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = yellow bold
-	commit = green bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse

@@ -41,7 +41,7 @@ endif
   Plug 'elzr/vim-json'
   Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --ts-completer' }
   Plug 'junegunn/fzf', { 'dir': '~/fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'vim-scripts/VimClojure'

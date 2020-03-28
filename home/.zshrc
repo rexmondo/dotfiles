@@ -76,6 +76,10 @@ vimgrep () {
 export PATH=$HOME/local/bin:/usr/local/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/sbt/bin" # Add sbt bin to path
+export PATH="$PATH:$HOME/.local/bin" # Add local bin to path
+export PATH="/home/ben/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 function chpwd() {
   rename_window
